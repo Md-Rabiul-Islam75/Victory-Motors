@@ -6,7 +6,6 @@ import { apiSlice } from "../slices/api/apiSlice";
 import appReducer from "../slices/sync/appSlice";
 import authReducer from "../slices/sync/authSlice";
 import userReducer from "../slices/sync/userSlice";
-import fcmReducer from "../slices/sync/fcmSlice";
 
 const persistConfig = {
   key: "root",
@@ -18,7 +17,6 @@ const rootReducer = combineReducers({
   app: appReducer,
   auth: authReducer,
   user: userReducer,
-  fcm: fcmReducer,
   [apiSlice.reducerPath]: apiSlice.reducer,
 });
 

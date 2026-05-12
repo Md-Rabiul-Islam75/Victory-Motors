@@ -8,7 +8,6 @@ export interface IUser {
   lastName: string;
   email: string;
   isEmailVerified: boolean;
-  firebaseUserId: string;
   isProfileCompleted: boolean;
   avatar?: string;
   specialistId?: number | null;

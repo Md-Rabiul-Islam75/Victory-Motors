@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import type { BaseQueryFn, FetchArgs, FetchBaseQueryError } from "@reduxjs/toolkit/query";
-import { logout } from "@/lib/firebase/firebaseAuth";
 import { setAuthenticated } from "../sync/authSlice";
 
 const baseQuery = fetchBaseQuery({
@@ -19,13 +18,6 @@ const baseQueryWithAuthHandler: BaseQueryFn<
   // Check if the error is 401 Unauthorized
   if (result.error && result.error.status === 401) {
     console.log("Token expired, cleaning up and redirecting...");
-
-    // Clear Firebase auth
-    try {
-      await logout();
-    } catch (error) {
-      console.error("Error during Firebase logout:", error);
-    }
 
     // Clear Redux auth state
     api.dispatch(setAuthenticated(false));

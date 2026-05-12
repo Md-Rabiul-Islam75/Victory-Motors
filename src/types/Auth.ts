@@ -2,15 +2,15 @@ export interface IRegisterUserPayload {
   firstName: string;
   lastName: string;
   email: string;
-  idToken: string;
+  password: string;
 }
 
 export interface IDeviceInfo {
-  fcmToken: string;
   deviceName: string;
 }
 
 export interface ILoginUserPayload {
-  idToken: string;
+  email: string;
+  password: string;
   deviceInfo: IDeviceInfo;
 }
