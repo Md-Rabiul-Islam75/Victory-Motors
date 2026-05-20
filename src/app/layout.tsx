@@ -12,8 +12,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "IDS",
-  description: "IDS - Authentication Platform",
+  title: "Victory Motors — Professional Automotive Training Institute in Bangladesh",
+  description:
+    "Victory Motors is Bangladesh's leading professional automotive training institute, offering hands-on courses in EV, advanced automobile engineering, diagnostics and service management.",
 };
 
 export default function RootLayout({
