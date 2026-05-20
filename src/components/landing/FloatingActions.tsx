@@ -19,7 +19,7 @@ export default function FloatingActions({ site }: { site: SiteInfo }) {
   return (
     <>
       <a
-        href="#contact"
+        href="contact"
         className="fixed right-5 bottom-24 z-30 hidden md:flex h-20 w-20 rounded-full bg-vm-gold-500 text-vm-navy-900 font-bold text-sm items-center justify-center text-center shadow-2xl hover:scale-110 transition-transform"
       >
         <span className="leading-tight">For<br />Enquiry</span>

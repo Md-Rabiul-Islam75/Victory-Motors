@@ -155,7 +155,7 @@ export const landingContent: LandingContent = {
       "Join our next batch of Advanced Automobile Engineering and learn from veterans with 15+ years in the industry. Limited seats available.",
     image: "/images/banner.png",
     ctaLabel: "Apply Now",
-    ctaHref: "#contact",
+    ctaHref: "contact",
   },
   about: {
     heading: "About Victory Motors",
