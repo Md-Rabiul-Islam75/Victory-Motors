@@ -7,7 +7,7 @@ export const landingContent: LandingContent = {
     email: "info@victorymotors.com",
     phone: "+8801XXX-XXXXXX",
     hours: "Saturday – Thursday: 9 AM to 9 PM",
-    address: "House 12, Road 5, Dhanmondi, Dhaka-1209, Bangladesh",
+    address: "58 N Brook Hall Rd, Dhaka 1100, Bangladesh",
     logo: "/images/victory-motors-logo.jpeg",
     socials: {
       facebook: "https://facebook.com/",
