@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Clock, ArrowUpRight, GraduationCap } from "lucide-react";
 import { Course } from "@/types/Landing";
 
@@ -14,7 +15,12 @@ export default function CourseFeatures({ courses }: { courses: Course[] }) {
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {courses.map((course) => (
-            <article key={course.id} className="vm-card group">
+            <Link
+              key={course.id}
+              href={course.href}
+              aria-label={`View details for ${course.title}`}
+              className="vm-card group block focus:outline-none focus-visible:ring-2 focus-visible:ring-vm-red-500 focus-visible:ring-offset-2"
+            >
               <div className="relative aspect-[4/3] overflow-hidden bg-vm-navy-100">
                 <Image
                   src={course.image}
@@ -25,9 +31,12 @@ export default function CourseFeatures({ courses }: { courses: Course[] }) {
                 <span className="absolute top-3 left-3 bg-vm-red-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
                   {course.level}
                 </span>
+                <span className="absolute top-3 right-3 bg-white text-vm-red-600 text-sm font-bold px-3 py-1 rounded-full shadow-md">
+                  {course.price}
+                </span>
               </div>
               <div className="p-5">
-                <h3 className="text-lg font-bold text-vm-navy-900 line-clamp-2 min-h-[3.5rem]">
+                <h3 className="text-lg font-bold text-vm-navy-900 line-clamp-2 min-h-[3.5rem] group-hover:text-vm-red-500 transition-colors">
                   {course.title}
                 </h3>
                 <p className="mt-2 text-sm text-vm-ink-400 line-clamp-3">
@@ -43,14 +52,11 @@ export default function CourseFeatures({ courses }: { courses: Course[] }) {
                     Certified
                   </span>
                 </div>
-                <a
-                  href={course.href}
-                  className="mt-5 inline-flex items-center gap-1.5 text-vm-red-500 font-semibold hover:gap-3 transition-all"
-                >
+                <span className="mt-5 inline-flex items-center gap-1.5 text-vm-red-500 font-semibold group-hover:gap-3 transition-all">
                   View Details <ArrowUpRight size={16} />
-                </a>
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>

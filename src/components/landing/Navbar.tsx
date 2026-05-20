@@ -280,10 +280,14 @@ export default function Navbar({
           <a
             href="#verify"
             onClick={() => setOpen(false)}
-            className="mt-3 w-full inline-flex items-center justify-center gap-2 border-2 border-vm-navy-900 text-vm-navy-900 hover:bg-vm-navy-900 hover:text-white transition-colors px-5 py-2.5 rounded-md text-sm font-semibold"
+            aria-disabled="true"
+            className="relative mt-3 w-full inline-flex items-center justify-center gap-2 border-2 border-vm-navy-900 text-vm-navy-900 hover:bg-vm-navy-900 hover:text-white transition-colors px-5 py-2.5 rounded-md text-sm font-semibold"
           >
             <ShieldCheck size={16} />
             Certificate Verification
+            <span className="bg-vm-gold-500 text-vm-navy-900 text-[9px] font-bold uppercase tracking-wider px-1.5 py-0.5 rounded-full leading-none">
+              Soon
+            </span>
           </a>
         </nav>
 

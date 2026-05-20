@@ -38,7 +38,7 @@ export default function Footer({
             </div>
           </div>
           <p className="mt-5 text-sm leading-relaxed">
-            Bangladesh's leading automotive training institute — dedicated to producing
+            Bangladesh&apos;s leading automotive training institute — dedicated to producing
             certified, job-ready automotive professionals.
           </p>
           <div className="mt-6 flex gap-3">
@@ -93,11 +93,13 @@ export default function Footer({
           <h4 className="text-white font-semibold text-lg">Quick Links</h4>
           <div className="h-0.5 w-10 bg-vm-red-500 mt-2" />
           <ul className="mt-5 space-y-2.5 text-sm">
-            <li><Link href="#home" className="hover:text-vm-gold-500 transition-colors">Home</Link></li>
-            <li><Link href="#about" className="hover:text-vm-gold-500 transition-colors">About Us</Link></li>
-            <li><Link href="#courses" className="hover:text-vm-gold-500 transition-colors">Courses</Link></li>
-            <li><Link href="#instructors" className="hover:text-vm-gold-500 transition-colors">Instructors</Link></li>
-            <li><Link href="#faq" className="hover:text-vm-gold-500 transition-colors">FAQ</Link></li>
+            <li><Link href="/" className="hover:text-vm-gold-500 transition-colors">Home</Link></li>
+            <li><Link href="/about" className="hover:text-vm-gold-500 transition-colors">About Us</Link></li>
+            <li><Link href="/#courses" className="hover:text-vm-gold-500 transition-colors">Courses</Link></li>
+            <li><Link href="/#instructors" className="hover:text-vm-gold-500 transition-colors">Instructors</Link></li>
+            <li><Link href="/#testimonials" className="hover:text-vm-gold-500 transition-colors">Testimonials</Link></li>
+            <li><Link href="/#faq" className="hover:text-vm-gold-500 transition-colors">FAQ</Link></li>
+            <li><Link href="/contact" className="hover:text-vm-gold-500 transition-colors">Contact Us</Link></li>
           </ul>
         </div>
 
@@ -149,7 +151,7 @@ export default function Footer({
         <div className="vm-container py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-vm-navy-100/70">
           <p>© {new Date().getFullYear()} {site.name}. All rights reserved.</p>
           <p>
-            Designed with care for Bangladesh's automotive professionals.
+            Designed with care for Bangladesh&apos;s automotive professionals.
           </p>
         </div>
       </div>

@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import logoImg from "../../../public/images/logo.png";
 
 export default function AuthLayout({
   children,
@@ -14,14 +13,16 @@ export default function AuthLayout({
 
       {/* auth nav */}
       <nav className="sticky top-0 h-20 z-[999] bg-white-base flex items-center px-5 md:px-10 lg:px-20">
-        <Link href="/">
+        <Link href="/" className="flex items-center gap-3">
           <Image
-            src={logoImg}
-            alt="Brand logo"
-            height={44}
-            style={{ width: "auto" }}
+            src="/images/victory-motors-logo.jpeg"
+            alt="Victory Motors"
+            width={48}
+            height={48}
+            className="object-contain"
             priority
           />
+          <span className="font-bold text-vm-navy-900">Victory Motors</span>
         </Link>
       </nav>
 
